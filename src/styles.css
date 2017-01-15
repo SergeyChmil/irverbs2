@@ -1,1 +1,269 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
+
+.app-container{
+  min-width: 480px;
+}
+
+.header-text{
+  padding-left: 32px;
+}
+
+/************
+FONTS
+ */
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: .8em;
+}
+
+h5{
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.strong{
+  font-size: 1.15em;
+}
+
+.pronounce{
+  font-weight: bold;
+  color: #5e5e5e;
+}
+
+/*****************************
+NAVIGATION MENU
+ */
+
+.my-navbar{
+  box-shadow: 0 1px 5px #02033a;
+  z-index: 1;
+}
+
+
+/*****************************
+FOOTER
+ */
+
+footer{
+  font-size: 0.8em;
+  color: whitesmoke;
+  text-shadow: black 1px 1px 0px;
+  padding-top: 5px;
+}
+
+/*****************************
+VERB PANELS
+*/
+.my-card{
+  border:none;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+}
+
+.verb-panel-header-col{
+  padding: 7px 20px;
+}
+.verb-panel-header-col:nth-child(60n+1){
+  border-left: none;
+}
+
+.verb-panel-header{
+  padding: 0;
+  cursor: pointer;
+}
+.verb-panel-header p{
+  margin: 0;
+}
+
+.body-content > * {
+  padding: 0;
+}
+
+.translation, .pronounce{
+  min-height: 100%;
+}
+
+.translation, .pronounce, .example{
+  padding: 5px 5px;
+}
+
+.translation, .pronounce{
+  box-shadow: inset 0px 7px 9px -8px rgba(0,0,0,0.5);
+}
+
+.example{
+  box-shadow: inset 0px -5px 9px -8px rgba(0,0,0,0.75);
+}
+
+/************
+NORMAL PANEL COLORS
+ */
+
+.verb-panel-header-normal{
+  text-shadow: 0 1px 1px rgba(255, 253, 246,1);
+  border-right:solid 1px #7b9e71;
+  border-bottom:solid 1px #7b9e71;
+  border-top:solid 1px #c6ffb6;
+  border-left:solid 1px #c6ffb6;
+  color: #070f07;
+
+}
+.verb-panel-header-col-normal{
+  border-right: solid 1px #7b9e71;
+  border-left: solid 1px #c6ffb6;
+}
+.verb-panel-header-col-normal:nth-child(1n){
+  background-image:  linear-gradient(to top, rgba(171, 222, 141, 1) 25%, rgba(95, 190, 95,1));
+  background-color: rgba(74, 199, 0, 0.4);
+}
+
+.verb-panel-header-col-normal:nth-child(3n){
+  border-right: solid 1px #455d3f;
+}
+
+.verb-panel-body-normal{
+  background-color: #ecfdec;
+}
+
+.pronounce-normal{
+  background-color: #d1ffd1;
+}
+.pronounce-normal, .translation-normal{
+  border-right: solid 1px #001c00;
+}
+.example-normal{
+  background-color: #a5e6a5;
+  border-top: solid 1px #4ac700;
+  border-right: solid 1px #455d3f;
+}
+
+
+/************
+RARE PANEL COLORS
+ */
+
+.verb-panel-header-rare{
+  text-shadow: 0 1px 1px rgba(255, 254, 246, 1);
+  border-right:solid 1px #6eafb5;
+  border-bottom:solid 1px #6eafb5;
+  border-top:solid 1px #a1e7ed;
+  border-left:solid 1px #c3fafd;
+  color: rgba(7, 7, 15, 0.88);
+}
+.verb-panel-header-col-rare{
+  border-right: solid 1px #6eafb5;
+  border-left: solid 1px #c3fafd;
+}
+.verb-panel-header-col-rare:nth-child(1n){
+  background-image: linear-gradient(to top, rgb(145, 213, 219) 25%, rgb(116, 181, 187));
+  background-color: cornflowerblue;
+}
+.verb-panel-body-rare{
+  background-color: #dffffc;
+}
+
+.pronounce-rare{
+  background-color: #bbe5eb;
+}
+.pronounce-rare, .translation-rare{
+  border-right: solid 1px #838383;
+}
+.example-rare{
+  background-color: #c7f1f7;
+  border-top: solid 1px #838383;
+  border-right: solid 1px #979797;
+}
+
+/************
+OLD PANEL COLORS
+ */
+
+.verb-panel-header-old{
+  text-shadow: 0px 0px 5px rgba(100, 0, 0, 0.5);
+  border-right:solid 1px darkred;
+  border-bottom:solid 1px darkred;
+  border-top:solid 1px #ffb8b8;
+  border-left:solid 1px #ffb8b8;
+  color:whitesmoke;
+}
+.verb-panel-header-col-old{
+  border-right: solid 1px darkred;
+  border-left: solid 1px #ffb8b8;
+}
+.verb-panel-header-col-old:nth-child(1n){
+  background-image:  linear-gradient(to top, rgba(100,0,0,1) 40%, rgba(255,184,184,0.5) );
+  background-color: red;
+}
+.verb-panel-body-old{
+  background-color: #ffe7e7;
+}
+.pronounce-old{
+  background-color: #fee1e1;
+}
+.pronounce-old, .translation-old{
+  border-right: solid 1px darkred;
+}
+.example-old{
+  background-color: #ffcece;
+  border-top: solid 1px darkred;
+  border-right: solid 1px darkred;
+}
+
+/****************************
+BACKGROUND IMAGE
+ */
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+@media (max-width: 767px) {
+  .form-inline{
+    display: block;
+  }
+  .wide-row{
+    display: none;
+  }
+
+  .small-row{
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .wide-row{
+    display: flex;
+  }
+  .small-row{
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-text{
+    padding-left: 20px;
+  }
+}

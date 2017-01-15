@@ -1,3 +1,50 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container app-container">
+  <!-------- NAVIGATION MENU --------->
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded my-navbar">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <button class="btn btn-link" href="#">Home <span class="sr-only">(current)</span></button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-link" (click)="onRareClick()">Rare</button>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input #searchData class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="verbPanel.showPanel(searchData.value);" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-------- PANELS --------->
+
+  <section id="verbs-list">
+
+  <div class="container-fluid ">
+    <div id="accordion" role="tablist" aria-multiselectable="true" >
+    <!--<div class="panel-group my-panel" id="accordion" role="tablist" aria-multiselectable="true">-->
+      <app-verb-panel #verbPanel (click)="verbPanel.showPanel()" *ngFor="let verb of verbs" [verb]="verb" [isRareEnabled]="isRareEnabled"
+                      [isOldEnabled]="isOldEnabled" [language]="language"></app-verb-panel>
+    </div>
+  </div>
+  </section>
+
+  <section id="quiz">
+
+  </section>
+
+  <!-------- FOOTER --------->
+  <footer class="text-center">
+    <p>&copy; Sergey Chmil 2017 <span><a href="mailto:sergeythmil@gmail.com">sergeytchmil@gmail.com </a></span>
+    <span><a href="skype:sergey.tchmil?chat"><img src="../img/skype_icon.svg"></a> </span></p>
+  </footer>
+</div>

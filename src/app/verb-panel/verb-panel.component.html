@@ -1,0 +1,187 @@
+<!--
+<div class="panel panel-default panel-verb-rare text-center"
+     *ngIf="verb.usability=='normal' || verb.usability=='rare' && isRareEnabled || verb.usability=='old' && isOldEnabled" >
+  <div class="panel-heading " role="tab" id="headingOne">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-4">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" [href]="'#Verb'+verb.id"
+               aria-expanded="true" aria-controls="collapseOne">
+              {{verb.form1}}
+            </a>
+          </h4>
+        </div>
+        <div class="col-xs-4">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" [href]="'#Verb'+verb.id"
+               aria-expanded="true" aria-controls="collapseOne">
+              {{verb.form2}}
+            </a>
+          </h4>
+        </div>
+        <div class="col-xs-4">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" [href]="'#Verb'+verb.id"
+               aria-expanded="true" aria-controls="collapseOne">
+              {{verb.form3}}
+            </a>
+          </h4>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div [id]="'Verb'+verb.id" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body my-panel-body">
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="col-xs-4">
+            <p class="prounoncation">Произношение <span>  |    </span><strong class="translation">Перевод</strong></p>
+          </div>
+          <div class="col-xs-4">
+            <p class="prounoncation">Произношение <span>  |    </span><strong class="translation">Перевод</strong></p>
+          </div>
+          <div class="col-xs-4">
+            <p class="prounoncation">Произношение <span>  |    </span><strong class="translation">Перевод</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-warning" role="alert">
+        <div class="container-fluid">
+          <div class="row">
+            <p><label>1st form:</label>  It is inpossible to forget! <i>Это невозможно забыть!</i></p>
+            <p><label>1st form:</label>  It is inpossible to forget! <i>Это невозможно забыть!</i></p>
+            <p class="last-item-margin"><label>1st form:</label>  It is inpossible to forget! <i>Это невозможно забыть!</i></p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+-->
+<div  class="wrapper" [attr.id]="verb.form1" *ngIf="verb.usability=='normal' || verb.usability=='rare'
+    && isRareEnabled || verb.usability=='old' && isOldEnabled" (click)="check(verb.form1)">
+  <div class="card my-card">
+    <div [class]="'card-header verb-panel-header verb-panel-header-'+ verb.usability" role="tab" id="headingOne"
+         data-toggle="collapse"
+         data-parent="#accordion"
+         aria-expanded="true"
+         [attr.data-target]="'#verb'+verb.id">
+      <div class="container">
+        <div class="row text-center">
+          <div [class]="'col col-sm-4 verb-panel-header-col verb-panel-header-col-'+ verb.usability">
+            <div class="row">
+              <div class="col-sm-2 col-md-3 col-xl-4"></div>
+              <div class="col-sm-10 col-md-9 col-xl-8 header-text">
+                <h5 class="mb-0">
+                  <p>{{verb.form1}}</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div [class]="'col col-sm-4 verb-panel-header-col verb-panel-header-col-'+ verb.usability">
+            <div class="row">
+              <div class="col-sm-2 col-md-3 col-xl-4"></div>
+              <div class="col-sm-10 col-md-9 col-xl-8 header-text">
+                <h5 class="mb-0">
+                  <p>{{verb.form2}}</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div [class]="'col col-sm-4 verb-panel-header-col verb-panel-header-col-'+ verb.usability">
+            <div class="row">
+              <div class="col-sm-2 col-md-3 col-xl-4"></div>
+              <div class="col-sm-10 col-md-9 col-xl-8 header-text">
+                <h5 class="mb-0">
+                  <p>{{verb.form3}}</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div #accBody [id]="'verb'+verb.id" [class]="'collapse verb-panel-body-'+verb.usability" role="tabpanel"
+         aria-labelledby="headingOne" >
+      <div class="container  ">
+
+
+        <div  class="row body-content wide-row text-center">
+          <div class="col  form-inline">
+
+            <!-----------
+            Можно ли как-то организовать доступ иначе, чем languages[language]['form1']?
+            Как-то парсить данные на входе и распределять по отдельным свойствам verb. Или сделат ьтак, чтобы
+            переводы грузил каждый глагол отдельно для себя, из отдельного json?
+
+            Как создать сначала список экземпляров класса глагол и заполнить его данными английского,
+            а затем, в зависимости от выбранного языка, перебрать список и догрузить переводы?
+            -------------->
+
+
+            <div [class]="'col pronounce pronounce-'+verb.usability">{{verb.pronounceForm1}}</div>
+            <div [class]="'col translation translation-'+verb.usability">{{verb.languages[language]['form1']}}</div>
+          </div>
+          <div class="col form-inline">
+
+            <div [class]="'col col-sm-12 col-md-6 pronounce pronounce-'+verb.usability">{{verb.pronounceForm2}}</div>
+            <div [class]="'col col-sm-12 col-md-6 translation translation-'+verb.usability">
+              {{verb.languages[language]['form2']}}
+            </div>
+          </div>
+          <div class="col form-inline">
+
+            <div [class]="'col col-sm-12 col-md-6 pronounce pronounce-'+verb.usability">{{verb.pronounceForm3}}</div>
+            <div [class]="'col col-sm-12 col-md-6 translation translation-'+verb.usability">
+              {{verb.languages[language]['form3']}}
+            </div>
+          </div>
+        </div>
+
+        <div class="row body-content small-row">
+
+          <div [class]="'col col-sm-4 pronounce pronounce-'+verb.usability">{{verb.pronounceForm1}}</div>
+          <div [class]="'col col-sm-4 pronounce pronounce-'+verb.usability">{{verb.pronounceForm2}}</div>
+          <div [class]="'col col-sm-4 pronounce pronounce-'+verb.usability">{{verb.pronounceForm3}}</div>
+        </div>
+
+        <div class="row body-content small-row">
+          <div [class]="'col col-sm-4 translation translation-'+verb.usability">{{verb.languages[language]['form1']}}
+          </div>
+          <div [class]="'col col-sm-4 translation translation-'+verb.usability">{{verb.languages[language]['form2']}}
+          </div>
+          <div [class]="'col col-sm-4 translation translation-'+verb.usability">{{verb.languages[language]['form3']}}
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div [class]="'col col-md-4 example example-'+verb.usability">
+            <div class="col col-sm-12 strong"><strong>{{verb.example1}}</strong></div>
+            <div class="col col-sm-12 ">{{verb.languages[language]['example1']}}</div>
+          </div>
+          <div [class]="'col col-md-4 example example-'+verb.usability">
+            <div class="col col-sm-12 strong"><strong>{{verb.example2}}</strong></div>
+            <div class="col col-sm-12">{{verb.languages[language]['example2']}}</div>
+          </div>
+          <div [class]="'col col-md-4 example example-'+verb.usability">
+            <div class="col col-sm-12 strong"><strong>{{verb.example3}}</strong></div>
+            <div class="col col-sm-12 ">{{verb.languages[language]['example3']}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="card-block">-->
+    <!--{{verb.pronounceForm1}}-->
+    <!--</div>-->
+  </div>
+</div>

@@ -4,17 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {VerbService} from "./verb.service";
+import { VerbPanelComponent } from './verb-panel/verb-panel.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VerbPanelComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [VerbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

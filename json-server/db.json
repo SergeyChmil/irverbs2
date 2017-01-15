@@ -1,0 +1,1206 @@
+{
+  "verbs": [
+    {
+      "id": 0,
+      "usability": "rare",
+      "form1": "abide",
+      "form2": "abode",
+      "form3": "abode",
+      "pronounceForm1": "[ə'baɪd]",
+      "pronounceForm2": "[ə'bəud]",
+      "pronounceForm3": "[ə'bəud]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Придерживаться, соблюдать, хранить, ожидать, обитать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 1,
+      "usability": "rare",
+      "form1": "arise",
+      "form2": "arose",
+      "form3": "arisen",
+      "pronounceForm1": "[ə'raɪz]",
+      "pronounceForm2": "[ə'rəuz]",
+      "pronounceForm3": "[ə'rɪz(ə)n]",
+      "example1": "New problems arise daily.",
+      "example2": "A thin curl of smoke arose lazily from the cabin.",
+      "example3": "She has been arisen from her wheelchair.",
+      "languages": {
+        "ru": {
+          "form1": "Возникать, подниматься",
+          "form2": "Возникал, поднимался",
+          "form3": "Возник, поднялся",
+          "example1": "Новые проблемы возникают ежедневно.",
+          "example2": "Тонкий завиток дыма лениво тянулся из избушки.",
+          "example3": "Она поднялась из своей инвалидной коляски."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 2,
+      "usability": "rare",
+      "form1": "awake",
+      "form2": "awoke",
+      "form3": "awaked",
+      "pronounceForm1": "[ə'weɪk]",
+      "pronounceForm2": "[ə'wəuk]",
+      "pronounceForm3": "[ə'weɪk]",
+      "example1": "She is still awake and asking for coffee.",
+      "example2": "I awoke at six with a feeling of dread.",
+      "example3": "When Brandon awaked the sun was already high in the sky.",
+      "languages": {
+        "ru": {
+          "form1": "Будить, просыпаться, бодрствовать",
+          "form2": "Просыпался, не спал",
+          "form3": "Проснулся",
+          "example1": "Она все еще не спит и просит кофе.",
+          "example2": "Я проснулся в шесть с ощущением ужаса.",
+          "example3": "Солнце поднялось уже высоко к тому времени, как Брендон проснулся."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 3,
+      "usability": "normal",
+      "form1": "be",
+      "form2": "was, were",
+      "form3": "been",
+      "pronounceForm1": "[bi:]",
+      "pronounceForm2": "[wз:]",
+      "pronounceForm3": "[bi:n]",
+      "example1": "Shakespeare's \"To be or not to be\" is the ultimate question.",
+      "example2": "The wedding was last week.",
+      "example3": "Where have you been?",
+      "languages": {
+        "ru": {
+          "form1": "Быть, являться",
+          "form2": "Был, являлся",
+          "form3": "Был, состоялся",
+          "example1": "\"Быть или не быть\" Шекспира является ключевым вопросом.",
+          "example2": "Свадьба была на прошлой неделе.",
+          "example3": "Где ты был?"
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 4,
+      "usability": "rare",
+      "form1": "bear",
+      "form2": "bore",
+      "form3": "born",
+      "pronounceForm1": "[beə]",
+      "pronounceForm2": "[bɔː]",
+      "pronounceForm3": "[bɔːn]",
+      "example1": "The roof will not bear the strain of his weight.",
+      "example2": "Alice bore his child and now they're waiting for another one.",
+      "example3": "She has been born to be musician.",
+      "languages": {
+        "ru": {
+          "form1": "Выносить (ребёнка), рождать, поддерживать, плодоносить",
+          "form2": "Выносила, рождался, плодоносило",
+          "form3": "Рождён",
+          "example1": "Крыша не выдержит тяжести его веса.",
+          "example2": "Алиса выносила его ребёнка и теперь они ждут ещё одного.",
+          "example3": "Она рождена быть музыкантом."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 5,
+      "usability": "normal",
+      "form1": "beat",
+      "form2": "beat",
+      "form3": "beaten",
+      "pronounceForm1": "[bi:t]",
+      "pronounceForm2": "[bi:t]",
+      "pronounceForm3": "['bi:tn]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Бить",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 6,
+      "usability": "normal",
+      "form1": "become",
+      "form2": "became",
+      "form3": "become",
+      "pronounceForm1": "[bi:kʌm]",
+      "pronounceForm2": "[bi:keim]",
+      "pronounceForm3": "[bi:kʌm]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Становиться, делаться",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 7,
+      "usability": "rare",
+      "form1": "befall",
+      "form2": "befell",
+      "form3": "befallen",
+      "pronounceForm1": "[bɪ'fɔːl]",
+      "pronounceForm2": "[bɪ'fel]",
+      "pronounceForm3": "[bɪ'fɔːlən]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Случаться",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 8,
+      "usability": "normal",
+      "form1": "begin",
+      "form2": "began",
+      "form3": "begun",
+      "pronounceForm1": "[bi'gin]",
+      "pronounceForm2": "[bi'gæn]",
+      "pronounceForm3": "[bi'gʌn]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Начинаться",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 9,
+      "usability": "rare",
+      "form1": "behold",
+      "form2": "beheld",
+      "form3": "beheld",
+      "pronounceForm1": "[bɪ'həuld]",
+      "pronounceForm2": "[bɪ'held]",
+      "pronounceForm3": "[bɪ'held]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Вглядываться, замечать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 10,
+      "usability": "rare",
+      "form1": "bend",
+      "form2": "bent",
+      "form3": "bent",
+      "pronounceForm1": "[bend]",
+      "pronounceForm2": "[bent]",
+      "pronounceForm3": "[bent]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Гнуть, сгибать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 11,
+      "usability": "rare",
+      "form1": "beseech",
+      "form2": "besought",
+      "form3": "besought",
+      "pronounceForm1": "[bɪ'siːʧ]",
+      "pronounceForm2": "[bɪ'sɔːt]",
+      "pronounceForm3": "[bɪ'sɔːt]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Умолять, упрашивать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 12,
+      "usability": "rare",
+      "form1": "beset",
+      "form2": "beset",
+      "form3": "beset",
+      "pronounceForm1": "[bɪ'set]",
+      "pronounceForm2": "[bɪ'set]",
+      "pronounceForm3": "[bɪ'set]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Окружать, осаждать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 13,
+      "usability": "rare",
+      "form1": "bet",
+      "form2": "bet",
+      "form3": "bet",
+      "pronounceForm1": "[bet]",
+      "pronounceForm2": "[bet]",
+      "pronounceForm3": "[bet]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Спорить, держать пари",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 14,
+      "usability": "rare",
+      "form1": "bid",
+      "form2": "bid",
+      "form3": "bid",
+      "pronounceForm1": "[bɪd]",
+      "pronounceForm2": "[bɪd]",
+      "pronounceForm3": "[bɪd]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Торговаться, просить",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 15,
+      "usability": "rare",
+      "form1": "bind",
+      "form2": "bound",
+      "form3": "bound",
+      "pronounceForm1": "[baɪnd]",
+      "pronounceForm2": "[baund]",
+      "pronounceForm3": "[baund]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Связывать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 16,
+      "usability": "normal",
+      "form1": "bite",
+      "form2": "bit",
+      "form3": "bitten",
+      "pronounceForm1": "[baɪt]",
+      "pronounceForm2": "[bɪt]",
+      "pronounceForm3": "['bɪtn]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Кусать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 17,
+      "usability": "rare",
+      "form1": "bleed",
+      "form2": "bled",
+      "form3": "bled",
+      "pronounceForm1": "[bliːd]",
+      "pronounceForm2": "[bled]",
+      "pronounceForm3": "[bled]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Кровоточить",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 18,
+      "usability": "normal",
+      "form1": "blow",
+      "form2": "blew",
+      "form3": "blown",
+      "pronounceForm1": "[bləu]",
+      "pronounceForm2": "[bluː]",
+      "pronounceForm3": "[bləun]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Кровоточить",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 19,
+      "usability": "normal",
+      "form1": "break",
+      "form2": "broke",
+      "form3": "broken",
+      "pronounceForm1": "[breɪk]",
+      "pronounceForm2": "[brəuk]",
+      "pronounceForm3": "['brəuk(ə)n]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Ломать, прерывать, разбивать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 20,
+      "usability": "rare",
+      "form1": "breed",
+      "form2": "bred",
+      "form3": "bred",
+      "pronounceForm1": "[briːd]",
+      "pronounceForm2": "[bred]",
+      "pronounceForm3": "[bred]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Порождать, прерывать, разводить",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 21,
+      "usability": "normal",
+      "form1": "bring",
+      "form2": "brought",
+      "form3": "brought",
+      "pronounceForm1": "[brɪŋ]",
+      "pronounceForm2": "[brɔːt]",
+      "pronounceForm3": "[brɔːt]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Приносить, приводить",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 22,
+      "usability": "rare",
+      "form1": "broadcast",
+      "form2": "broadcast",
+      "form3": "broadcast",
+      "pronounceForm1": "['brɔːdkɑːst]",
+      "pronounceForm2": "['brɔːdkɑːst]",
+      "pronounceForm3": "['brɔːdkɑːst]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Вещать, распространять",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 23,
+      "usability": "normal",
+      "form1": "build",
+      "form2": "built",
+      "form3": "built",
+      "pronounceForm1": "[bɪld]",
+      "pronounceForm2": "[bɪlt]",
+      "pronounceForm3": "[bɪlt]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Строить, встраивать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 24,
+      "usability": "rare",
+      "form1": "burn",
+      "form2": "burnt",
+      "form3": "burnt",
+      "pronounceForm1": "[bɜːn]",
+      "pronounceForm2": "[bɜːnt]",
+      "pronounceForm3": "[bɜːnt]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Гореть, сжигать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 25,
+      "usability": "rare",
+      "form1": "burst",
+      "form2": "burst",
+      "form3": "burst",
+      "pronounceForm1": "[bɜːst]",
+      "pronounceForm2": "[bɜːst]",
+      "pronounceForm3": "[bɜːst]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Взрывать, лопаться",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 26,
+      "usability": "normal",
+      "form1": "buy",
+      "form2": "bought",
+      "form3": "bought",
+      "pronounceForm1": "[baɪ]",
+      "pronounceForm2": "[bɔːt]",
+      "pronounceForm3": "[bɔːt]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Покупать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 27,
+      "usability": "normal",
+      "form1": "can",
+      "form2": "could",
+      "form3": "could",
+      "pronounceForm1": "[kæn]",
+      "pronounceForm2": "[kud]",
+      "pronounceForm3": "[kud]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Покупать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 28,
+      "usability": "rare",
+      "form1": "cast",
+      "form2": "cast",
+      "form3": "cast",
+      "pronounceForm1": "[kɑːst]",
+      "pronounceForm2": "[kɑːst]",
+      "pronounceForm3": "[kɑːst]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Бросать, лить (металл)",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 29,
+      "usability": "rare",
+      "form1": "catch",
+      "form2": "cought",
+      "form3": "cought",
+      "pronounceForm1": "[kæʧ]",
+      "pronounceForm2": "[kɔːt]",
+      "pronounceForm3": "[kɔːt]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Ловить, хватать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 30,
+      "usability": "normal",
+      "form1": "choose",
+      "form2": "chose",
+      "form3": "chosen",
+      "pronounceForm1": "[ʧuːz]",
+      "pronounceForm2": "[ʧuːz]",
+      "pronounceForm3": "['ʧəuz(ə)n]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Выбирать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 31,
+      "usability": "rare",
+      "form1": "cling",
+      "form2": "clung",
+      "form3": "clung",
+      "pronounceForm1": "[klɪŋ]",
+      "pronounceForm2": "[klʌŋ]",
+      "pronounceForm3": "[klʌŋ]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Прилипать, цеплять, льнуть",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 32,
+      "usability": "rare",
+      "form1": "cleave",
+      "form2": "cleft",
+      "form3": "cloven",
+      "pronounceForm1": "[kliːv]",
+      "pronounceForm2": "[kleft]",
+      "pronounceForm3": "['kləuv(ə)n]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Рассекать, раскалывать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 33,
+      "usability": "rare",
+      "form1": "clothe",
+      "form2": "clothed",
+      "form3": "clothed",
+      "pronounceForm1": "[kləuð]",
+      "pronounceForm2": "[kləʊðd]",
+      "pronounceForm3": "[kləʊðd]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Одеть, одевать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 34,
+      "usability": "normal",
+      "form1": "come",
+      "form2": "came",
+      "form3": "come",
+      "pronounceForm1": "[kʌm]",
+      "pronounceForm2": "[keɪm]",
+      "pronounceForm3": "[kʌm]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Приходить",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 35,
+      "usability": "normal",
+      "form1": "cost",
+      "form2": "cost",
+      "form3": "cost",
+      "pronounceForm1": "[kɒst]",
+      "pronounceForm2": "[kɒst]",
+      "pronounceForm3": "[kɒst]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Оценивать, стоить",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 36,
+      "usability": "normal",
+      "form1": "creep",
+      "form2": "crept",
+      "form3": "crept",
+      "pronounceForm1": "[kriːp]",
+      "pronounceForm2": "[krept]",
+      "pronounceForm3": "[krept]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Ползать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    },
+    {
+      "id": 37,
+      "usability": "normal",
+      "form1": "cut",
+      "form2": "cut",
+      "form3": "cut",
+      "pronounceForm1": "[kʌt]",
+      "pronounceForm2": "[kʌt]",
+      "pronounceForm3": "[kʌt]",
+      "example1": "I can't abide dishonesty!",
+      "example2": "Did he abode the laws of our Kingdom?",
+      "example3": "He has been abode in a small Scottish village.",
+      "languages": {
+        "ru": {
+          "form1": "Резать, обрезать",
+          "form2": "Придерживался, хранил, соблюдал",
+          "form3": "Сдержал, сохранил, обитал",
+          "example1": "Я не сношу бесчестья!",
+          "example2": "Придерживался ли он законов нашего королевства?",
+          "example3": "Он обитал в небольшой Шотландской деревушке."
+        },
+        "ua": {
+          "form1": "Будувати",
+          "form2": "Збудував",
+          "form3": "Побудував",
+          "example1": "Почнемо будувати космічний корабель!",
+          "example2": "Ми збудували космічний корабель.",
+          "example3": "Космічний корабель було побудовано."
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ]
+}
