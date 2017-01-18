@@ -1,8 +1,7 @@
-import {Component, OnInit, AfterViewInit, QueryList, ViewChildren, ViewChild} from '@angular/core';
+import {Component, OnInit, AfterViewInit, ViewChild, ElementRef} from '@angular/core';
 import {VerbService} from "./verb.service";
 import {Verb} from "./verb";
-import {VerbPanelComponent} from "./verb-panel/verb-panel.component";
-import {childOfKind} from "tslint";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -11,26 +10,24 @@ import {childOfKind} from "tslint";
 })
 export class AppComponent implements OnInit, AfterViewInit {
 
+  @ViewChild('verbsList') el: ElementRef;
+
   private isRareEnabled: boolean = true;
-  private isOldEnabled: boolean = true;
   private language: string = 'ru';
-  private searchedString: string = '';
 
   verbs: Verb[];
+  clickedVerb:string;
+  rawSearchSubject: Subject<any> = new Subject();
+  preciseSearchSubject: Subject<any> = new Subject();
 
-  constructor(private verbService:VerbService) {
+  constructor(private verbService: VerbService) {
   }
-
-  @ViewChildren(VerbPanelComponent) verbPanelsList: QueryList<VerbPanelComponent>;
-  @ViewChild('verbPanel') verbPanel;
 
   ngOnInit() {
     this.getAllVerbs();
   }
 
-  ngAfterViewInit(){
-    console.log(this.verbPanel)
-  }
+  ngAfterViewInit() { }
 
   getAllVerbs() {
     this.verbService.getVerbAPI()
@@ -40,17 +37,39 @@ export class AppComponent implements OnInit, AfterViewInit {
       );
   }
 
-  onSearch(pString:string){
-    // window.open('#'+pString.toLowerCase(), "_self");
-    // console.log(this.verbs);
+  onRequestFound(pString: string) {
+    if (!this.isRareEnabled) this.switchIsRareEnabled();
+    this.preciseSearchSubject.next(pString);
+    console.log(pString + ' found')
   }
 
-  onRareClick(){
+  /******
+   * Send raw data to every panel for checking
+   */
+
+  onSearch(pVerb: string) {
+    pVerb = pVerb.toLowerCase();
+    if (pVerb === 'was' || pVerb == 'were') {
+      pVerb = 'be';
+    }
+    this.rememberClicked(pVerb);
+    this.rawSearchSubject.next(pVerb);
+  }
+
+  moveList(event) {
+    // console.log(event + '   catched event');
+    window.open('#' + event, "_self").scroll(window.scrollX, (window.scrollY - 52));
+  }
+
+  switchIsRareEnabled() {
     this.isRareEnabled = !this.isRareEnabled;
   }
-  //
-  // onOldClick(){
-  //   this.isOldEnabled = !this.isOldEnabled;
-  // }
+
+  rememberClicked(pString:string){
+    this.clickedVerb = pString;
+    this.preciseSearchSubject.next(pString);
+    console.log(pString + ' remembered')
+  }
+
 
 }

@@ -1,6 +1,6 @@
 <div class="container app-container">
   <!-------- NAVIGATION MENU --------->
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded my-navbar">
+  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -14,26 +14,31 @@
           <button class="btn btn-link" href="#">Home <span class="sr-only">(current)</span></button>
         </li>
         <li class="nav-item">
-          <button class="btn btn-link" (click)="onRareClick()">Rare</button>
+          <button class="btn btn-link" (click)="switchIsRareEnabled()">Rare</button>
         </li>
 
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input #searchData class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" (click)="verbPanel.showPanel(searchData.value);" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="onSearch(searchData.value);" type="submit">Search</button>
       </form>
     </div>
   </nav>
 
   <!-------- PANELS --------->
 
-  <section id="verbs-list">
+  <section #verbsList id="verbs-list">
 
   <div class="container-fluid ">
-    <div id="accordion" role="tablist" aria-multiselectable="true" >
+    <div id="accordion" role="tablist" aria-multiselectable="true">
     <!--<div class="panel-group my-panel" id="accordion" role="tablist" aria-multiselectable="true">-->
-      <app-verb-panel #verbPanel (click)="verbPanel.showPanel()" *ngFor="let verb of verbs" [verb]="verb" [isRareEnabled]="isRareEnabled"
-                      [isOldEnabled]="isOldEnabled" [language]="language"></app-verb-panel>
+      <app-verb-panel #verbPanel *ngFor="let verb of verbs" [verb]="verb" [isRareEnabled]="isRareEnabled"
+                      [language]="language" [rawSearchSubject]="rawSearchSubject"
+                      [preciseSearchSubject]="preciseSearchSubject"  [clickedVerb]="clickedVerb"
+                      (onRequestedVerbFound)="onRequestFound($event)"
+                      (onRequestedVerbOpened)="moveList($event)"
+                      (click)="rememberClicked(verbPanel.verb.form1)">
+      </app-verb-panel>
     </div>
   </div>
   </section>

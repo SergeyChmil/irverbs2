@@ -67,7 +67,7 @@
 </div>
 -->
 <div  class="wrapper" [attr.id]="verb.form1" *ngIf="verb.usability=='normal' || verb.usability=='rare'
-    && isRareEnabled || verb.usability=='old' && isOldEnabled" (click)="check(verb.form1)">
+    && isRareEnabled">
   <div class="card my-card">
     <div [class]="'card-header verb-panel-header verb-panel-header-'+ verb.usability" role="tab" id="headingOne"
          data-toggle="collapse"
@@ -110,7 +110,7 @@
       </div>
     </div>
 
-    <div #accBody [id]="'verb'+verb.id" [class]="'collapse verb-panel-body-'+verb.usability" role="tabpanel"
+    <div #panelBody [id]="'verb'+verb.id" [class]="'panel-collapse collapse verb-panel-body-'+verb.usability" role="tabpanel"
          aria-labelledby="headingOne" >
       <div class="container  ">
 
