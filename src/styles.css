@@ -17,7 +17,7 @@ MAIN
 section{
   /*padding-top: 52px;*/
   /*position:relative;*/
-  padding-top: 52px;
+  /*padding-top: 52px;*/
 }
 
 
@@ -28,6 +28,7 @@ FONTS
 body{
   font-family: 'Roboto', sans-serif;
   font-size: .8em;
+  padding-top: 52px;
 }
 
 h5{

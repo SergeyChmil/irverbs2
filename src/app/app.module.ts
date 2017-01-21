@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {VerbService} from "./verb.service";
 import { VerbPanelComponent } from './verb-panel/verb-panel.component';
+import {Verb} from "./verb";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     VerbPanelComponent,
+    Verb
   ],
   imports: [
     BrowserModule,

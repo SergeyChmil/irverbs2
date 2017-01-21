@@ -2,6 +2,7 @@ import {Component, OnInit, AfterViewInit, ViewChild, ElementRef} from '@angular/
 import {VerbService} from "./verb.service";
 import {Verb} from "./verb";
 import {Subject} from "rxjs";
+import {forEach} from "@angular/router/src/utils/collection";
 
 @Component({
   selector: 'app-root',
@@ -40,7 +41,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   onRequestFound(pString: string) {
     if (!this.isRareEnabled) this.switchIsRareEnabled();
     this.preciseSearchSubject.next(pString);
-    console.log(pString + ' found')
+    // console.log(pString + ' found')
   }
 
   /******
@@ -52,8 +53,66 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (pVerb === 'was' || pVerb == 'were') {
       pVerb = 'be';
     }
-    this.rememberClicked(pVerb);
-    this.rawSearchSubject.next(pVerb);
+
+    // for(var key in this.verbs){
+    //   //   // console.log(key + '   wweweewewewewe')
+    //   //   key.search(pVerb)
+    //       var verb:Verb = this.verbs[key];
+    //       // verb.checkRequest(pVerb);
+    //       // console.log(verb.form1)
+    //     // checkRequest : (verb) => (verb.checkRequest(pVerb))
+    //
+    //   }
+    // for (var i:number =0; i < this.verbs.length; i++){
+    //   var verb = this.verbs[i];
+    //   verb.check(pVerb);
+    // }
+
+    // for(var key in this.verbs){
+    //   // console.log(key + '   wweweewewewewe')
+    //   key.search(pVerb)
+    // }
+
+    // this.verbs.forEach(value => {
+    //     value.check(pVerb);
+    //   });
+    // this.rememberClicked(pVerb);
+    // this.rawSearchSubject.next(pVerb);
+    this.verbService.search(pVerb);
+    // this.verbService.searchVerbInputed.emit(pVerb);
+    // this.verbs.forEach((verb) => function (verb: Verb) {
+    //   // if(verb.check(pVerb)){
+    //   //   // verb.check(pVerb);
+    //   //   console.log('vidfboidfgbiorgb')
+    //   // }else{
+    //   //
+    //   // }
+    //   this.verbSe
+    // });
+
+    // this.verbs.forEach(vvverb => {
+    //   vvverb.show();
+    // })
+
+
+
+  //   function (numbers) {
+  //     numbers.forEach(element => {
+  //       if (element > this.max) {
+  //         this.max = element;
+  //       }
+  //     });
+  //   }
+  // };
+
+
+
+
+
+
+
+
+
   }
 
   moveList(event) {

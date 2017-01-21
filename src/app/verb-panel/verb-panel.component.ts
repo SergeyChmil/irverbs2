@@ -3,6 +3,7 @@ import {
 } from '@angular/core';
 import {Verb} from "../verb";
 import {Subject} from "rxjs";
+import {VerbService} from "../verb.service";
 declare var $: JQueryStatic;
 
 @Component({
@@ -24,8 +25,17 @@ export class VerbPanelComponent implements OnInit, AfterViewInit {
 
   isPanelOpen: boolean = false;
 
-  constructor(private _ngZone: NgZone) {
-    console.clear();
+
+  constructor(private _ngZone: NgZone,  private verbService:VerbService) {
+
+    // this.verbService.searchVerbInputed.subscribe(pVerb => {
+    //   this.onSearch(pVerb);
+    //   console.log('panel said: ' + pVerb + ' and ' + this.verb.form1);
+    // })
+  }
+
+  onSearch(pVerb){
+    // console.log(pVerb + '   wewewewe' )
   }
 
   ngOnInit() {
