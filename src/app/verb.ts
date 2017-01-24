@@ -10,7 +10,7 @@ import {Observable} from "rxjs";
 export class Verb implements IVerb, OnInit, AfterViewInit{
   id:number;
   usability:string;
-  form1:Observable<string>;
+  form1:string;
   form2:string;
   form3:string;
   pronounceForm1:string;
@@ -33,8 +33,9 @@ export class Verb implements IVerb, OnInit, AfterViewInit{
 
 
   constructor(private _ngZone: NgZone, private verbService:VerbService){
-
+    // this.form1 = form1;
   }
+
 
   ngOnInit() {
     // this.verbService.searchVerbInputed.subscribe(pVerb => {
@@ -93,8 +94,11 @@ export class Verb implements IVerb, OnInit, AfterViewInit{
   }
 
   // validate = (): boolean => {
- checkRequest(pVerb:string){
-    console.log(this.form1.map)
+  // get checkRequest(pVerb:string)
+
+ checkRequest = (pVerb:string) => {
+    console.log(pVerb + ' check')
+    // console.log(this.form1.map)
     // if(pVerb === this.form1 || pVerb === this.form2 || pVerb === this.form3){
     //   console.log('true');
     //   // return true

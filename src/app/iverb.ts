@@ -2,7 +2,7 @@ import {Observable} from "rxjs";
 export interface IVerb {
   id:number;
   usability:string;
-  form1:Observable<string>;
+  form1:string;
   form2:string;
   form3:string;
   pronounceForm1:string;

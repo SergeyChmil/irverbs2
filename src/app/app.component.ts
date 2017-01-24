@@ -68,17 +68,22 @@ export class AppComponent implements OnInit, AfterViewInit {
     //   verb.check(pVerb);
     // }
 
-    // for(var key in this.verbs){
-    //   // console.log(key + '   wweweewewewewe')
-    //   key.search(pVerb)
-    // }
+    for(var key in this.verbs){
+      var ruba:Verb = this.verbs[key];
+      ruba.checkRequest(pVerb);
+      // console.log(verb.usability + '   wweweewewewewe');
+      // key.search(pVerb)
+    }
 
     // this.verbs.forEach(value => {
     //     value.check(pVerb);
     //   });
     // this.rememberClicked(pVerb);
     // this.rawSearchSubject.next(pVerb);
-    this.verbService.search(pVerb);
+
+    // this.verbService.search(pVerb);
+
+
     // this.verbService.searchVerbInputed.emit(pVerb);
     // this.verbs.forEach((verb) => function (verb: Verb) {
     //   // if(verb.check(pVerb)){
