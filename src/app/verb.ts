@@ -1,70 +1,39 @@
 import {IVerb} from "./iverb";
-import {VerbService} from "./verb.service";
-import {Injectable, Directive, OnInit, AfterViewInit, HostListener, Input, Output, NgZone} from "@angular/core";
-import {Observable} from "rxjs";
+import { Directive, OnInit, AfterViewInit, EventEmitter} from "@angular/core";
 
 @Directive({
   selector: '[verb]'
 })
 
-export class Verb implements IVerb, OnInit, AfterViewInit{
-  id:number;
-  usability:string;
-  form1:string;
-  form2:string;
-  form3:string;
-  pronounceForm1:string;
-  pronounceForm2:string;
-  pronounceForm3:string;
-  languages:Object[];
-  example1:string;
-  example2:string;
-  example3:string;
+export class Verb implements IVerb {
 
-  // @Input() verb = () => {};
+  public emitter: EventEmitter<string>;
+  private isOpen:boolean = false;
 
-  // @HostListener('click',["$event"])
-  // clickReact(event:Event){
-  //   console.dir('azazaz ' + event)
-  //   console.dir('azazaz ' + this.form1)
-  //   return false;
+  constructor(private inputData: IVerb) {
+    this.emitter = new EventEmitter();
+  }
+
+
+  // ngOnInit() {
+  //   // this.verbService.searchVerbInputed.subscribe(pVerb => {
+  //   //   // this.onSearch(pVerb);
+  //   //   // console.log('verb core said: ' + pVerb + ' and ' + this.form3);
+  //   //   this.checkDelayed(pVerb);
+  //   // });
+  //
+  //
   // }
 
-
-
-  constructor(private _ngZone: NgZone, private verbService:VerbService){
-    // this.form1 = form1;
-  }
-
-
-  ngOnInit() {
-    // this.verbService.searchVerbInputed.subscribe(pVerb => {
-    //   // this.onSearch(pVerb);
-    //   // console.log('verb core said: ' + pVerb + ' and ' + this.form3);
-    //   this.checkDelayed(pVerb);
-    // });
-
-
-
-  }
-
-  // fetchEvent(): void {
-  //   return  this.verbService.searchVerbInputed.subscribe().then(event => {
-  //     // this.ev = event;
-  //     console.log(event); // Has a value
-  //     console.log(this.form1 + "Worked well" ); // Has a value
-  //   });
+  // ngAfterViewInit() {
+  //   // this.verbService.searchVerbInputed.subscribe(pVerb => {
+  //   //   // this.checkDelayed(pVerb);
+  //   //   console.log(this.form1);
+  //   // //   // this.onSearch(pVerb);
+  //   // //   console.log('verb core said: ' + pVerb + ' and ' + this.usability);
+  //   // });
+  //   // console.log('th' + this.example1)
   // }
-
-  ngAfterViewInit(){
-    this.verbService.searchVerbInputed.subscribe(pVerb => {
-      this.checkDelayed(pVerb);
-      console.log(this.form1);
-    //   // this.onSearch(pVerb);
-    //   console.log('verb core said: ' + pVerb + ' and ' + this.usability);
-    });
-    // console.log('th' + this.example1)
-  }
 
   // private onSearch(pVerb:string){
   // //   console.log(pVerb + '   dfdfdf')
@@ -77,38 +46,58 @@ export class Verb implements IVerb, OnInit, AfterViewInit{
   // }
 
 
-
   // isExpanded:boolean = false;
   // searchedVerb:string='';
 
-  subscribe(){
-
-  }
-
-  checkDelayed(pVerb:string){
-    // console.log('check delayed')
-    this._ngZone.runOutsideAngular(() => {
-      setTimeout(() => this.checkRequest(pVerb))
-    });
-
-  }
+  // checkDelayed(pVerb:string){
+  //   // console.log('react delayed')
+  //   this._ngZone.runOutsideAngular(() => {
+  //     setTimeout(() => this.checkRequest(pVerb))
+  //   });
+  //
+  // }
 
   // validate = (): boolean => {
   // get checkRequest(pVerb:string)
 
- checkRequest = (pVerb:string) => {
-    console.log(pVerb + ' check')
-    // console.log(this.form1.map)
-    // if(pVerb === this.form1 || pVerb === this.form2 || pVerb === this.form3){
-    //   console.log('true');
-    //   // return true
-    // }else{
-    //   console.log('false');
-    //   // return false;
-    // }
+  // checkRequest = (pVerb: string) => {
+  //   console.log(pVerb + ' react')
+  //   // console.log(this.form1.map)
+  //   // if(pVerb === this.form1 || pVerb === this.form2 || pVerb === this.form3){
+  //   //   console.log('true');
+  //   //   // return true
+  //   // }else{
+  //   //   console.log('false');
+  //   //   // return false;
+  //   // }
+  // }
+
+  react(pVerb: string, isClicked:boolean = false): boolean {
+    // console.log(this.form1 + ' | ' + this.isOpen + '  : isOpen')
+    try{
+      if (pVerb === this.form1 || pVerb === this.form2 || pVerb === this.form3) {
+        // if(!this.isOpen) {
+          this.emitter.emit('show');
+          // this.isOpen = !this.isOpen;
+          if(this.usability === 'rare') return true;
+        // }
+      }else{
+        // if(this.isOpen) {
+          this.emitter.emit('hide');
+          // this.isOpen = !this.isOpen;
+          // this.switchBoolean(this.isOpen);
+          return false;
+        // }
+      }
+    }
+    catch (e){
+      console.log('VERB ERROR ' + e);
+    }
   }
 
-
+  // modifyState(pBoolean:boolean){
+  //   this.isOpen = pBoolean;
+  // }
 
 
   // public show(){
@@ -118,5 +107,53 @@ export class Verb implements IVerb, OnInit, AfterViewInit{
   // hide(){
   //   console.log( this.form1 + '  VERB WORKED')
   // };
+
+  get id(): number {
+    return this.inputData.id
+  };
+
+  get usability(): string {
+    return this.inputData.usability
+  };
+
+  get form1(): string {
+    return this.inputData.form1
+  };
+
+  get form2(): string {
+    return this.inputData.form2
+  };
+
+  get form3(): string {
+    return this.inputData.form3
+  };
+
+  get pronounceForm1(): string {
+    return this.inputData.pronounceForm1
+  };
+
+  get pronounceForm2(): string {
+    return this.inputData.pronounceForm2
+  };
+
+  get pronounceForm3(): string {
+    return this.inputData.pronounceForm3
+  };
+
+  get languages(): Object[] {
+    return this.inputData.languages
+  };
+
+  get example1(): string {
+    return this.inputData.example1
+  };
+
+  get example2(): string {
+    return this.inputData.example2
+  };
+
+  get example3(): string {
+    return this.inputData.example3
+  };
 
 }

@@ -33,11 +33,10 @@
     <div id="accordion" role="tablist" aria-multiselectable="true">
     <!--<div class="panel-group my-panel" id="accordion" role="tablist" aria-multiselectable="true">-->
       <app-verb-panel #verbPanel *ngFor="let verb of verbs" [verb]="verb" [isRareEnabled]="isRareEnabled"
-                      [language]="language" [rawSearchSubject]="rawSearchSubject"
-                      [preciseSearchSubject]="preciseSearchSubject"  [clickedVerb]="clickedVerb"
+                      [language]="language"
                       (onRequestedVerbFound)="onRequestFound($event)"
                       (onRequestedVerbOpened)="moveList($event)"
-                      (click)="rememberClicked(verbPanel.verb.form1)">
+                      (click)="onSearch(verb.form1, true)">
       </app-verb-panel>
     </div>
   </div>

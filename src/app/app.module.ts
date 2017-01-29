@@ -12,8 +12,7 @@ import {Verb} from "./verb";
 @NgModule({
   declarations: [
     AppComponent,
-    VerbPanelComponent,
-    Verb
+    VerbPanelComponent
   ],
   imports: [
     BrowserModule,

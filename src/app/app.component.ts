@@ -3,6 +3,8 @@ import {VerbService} from "./verb.service";
 import {Verb} from "./verb";
 import {Subject} from "rxjs";
 import {forEach} from "@angular/router/src/utils/collection";
+import {IVerb} from "./iverb";
+import {el} from "@angular/platform-browser/testing/browser_util";
 
 @Component({
   selector: 'app-root',
@@ -16,8 +18,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   private isRareEnabled: boolean = true;
   private language: string = 'ru';
 
-  verbs: Verb[];
-  clickedVerb:string;
+  verbs: Verb[] = [];
+  rawData: IVerb[];
+  clickedVerb: string;
   rawSearchSubject: Subject<any> = new Subject();
   preciseSearchSubject: Subject<any> = new Subject();
 
@@ -28,31 +31,53 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.getAllVerbs();
   }
 
-  ngAfterViewInit() { }
+  ngAfterViewInit() {
+  }
 
   getAllVerbs() {
+    console.log('get verbs')
     this.verbService.getVerbAPI()
       .subscribe(
-        data => this.verbs = data,
-        error => console.log('Server error')
+        data => this.rawData = data,
+        error => console.log('Server error'),
+        function () {
+          for (var key in this.rawData) {
+            var verb: Verb = new Verb(this.rawData[key]);
+            this.verbs.push(verb);
+          }
+        }.bind(this)
       );
   }
 
-  onRequestFound(pString: string) {
-    if (!this.isRareEnabled) this.switchIsRareEnabled();
-    this.preciseSearchSubject.next(pString);
-    // console.log(pString + ' found')
+  requestFound(isClicked:boolean) {
+    if (!this.isRareEnabled && !isClicked) this.switchIsRareEnabled();
+    // this.preciseSearchSubject.next(pString);
+    // // console.log(pString + ' found')
   }
 
   /******
    * Send raw data to every panel for checking
    */
 
-  onSearch(pVerb: string) {
-    pVerb = pVerb.toLowerCase();
-    if (pVerb === 'was' || pVerb == 'were') {
-      pVerb = 'be';
+  onSearch(pVerb: string, isClicked:boolean = false) {
+    try {
+      console.log('on search')
+      pVerb = pVerb.toLowerCase();
+      if (pVerb === 'was' || pVerb == 'were') {
+        pVerb = 'be';
+      }
+
+      for (var key in this.verbs) {
+        var verb: Verb = this.verbs[key];
+        if(verb.react(pVerb)){
+          this.requestFound(isClicked);
+        }
+      }
     }
+    catch (e){
+      console.log('ARR ERROR ' + e)
+    }
+
 
     // for(var key in this.verbs){
     //   //   // console.log(key + '   wweweewewewewe')
@@ -65,18 +90,18 @@ export class AppComponent implements OnInit, AfterViewInit {
     //   }
     // for (var i:number =0; i < this.verbs.length; i++){
     //   var verb = this.verbs[i];
-    //   verb.check(pVerb);
+    //   verb.react(pVerb);
     // }
 
-    for(var key in this.verbs){
-      var ruba:Verb = this.verbs[key];
-      ruba.checkRequest(pVerb);
-      // console.log(verb.usability + '   wweweewewewewe');
-      // key.search(pVerb)
-    }
+    // for(var key in this.verbs){
+    //   var ruba:Verb = this.verbs[key];
+    //   ruba.checkRequest(pVerb);
+    //   // console.log(verb.usability + '   wweweewewewewe');
+    //   // key.search(pVerb)
+    // }
 
     // this.verbs.forEach(value => {
-    //     value.check(pVerb);
+    //     value.react(pVerb);
     //   });
     // this.rememberClicked(pVerb);
     // this.rawSearchSubject.next(pVerb);
@@ -86,8 +111,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     // this.verbService.searchVerbInputed.emit(pVerb);
     // this.verbs.forEach((verb) => function (verb: Verb) {
-    //   // if(verb.check(pVerb)){
-    //   //   // verb.check(pVerb);
+    //   // if(verb.react(pVerb)){
+    //   //   // verb.react(pVerb);
     //   //   console.log('vidfboidfgbiorgb')
     //   // }else{
     //   //
@@ -100,22 +125,14 @@ export class AppComponent implements OnInit, AfterViewInit {
     // })
 
 
-
-  //   function (numbers) {
-  //     numbers.forEach(element => {
-  //       if (element > this.max) {
-  //         this.max = element;
-  //       }
-  //     });
-  //   }
-  // };
-
-
-
-
-
-
-
+    //   function (numbers) {
+    //     numbers.forEach(element => {
+    //       if (element > this.max) {
+    //         this.max = element;
+    //       }
+    //     });
+    //   }
+    // };
 
 
   }
@@ -129,11 +146,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.isRareEnabled = !this.isRareEnabled;
   }
 
-  rememberClicked(pString:string){
-    this.clickedVerb = pString;
-    this.preciseSearchSubject.next(pString);
-    console.log(pString + ' remembered')
-  }
+  // rememberClicked(pString: string) {
+  //   this.clickedVerb = pString;
+  //   this.preciseSearchSubject.next(pString);
+  //   console.log(pString + ' remembered')
+  // }
 
 
 }
