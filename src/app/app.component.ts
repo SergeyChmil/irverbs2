@@ -1,37 +1,32 @@
-import {Component, OnInit, AfterViewInit, ViewChild, ElementRef} from '@angular/core';
+import {Component, OnInit, NgZone} from '@angular/core';
 import {VerbService} from "./verb.service";
 import {Verb} from "./verb";
-import {Subject} from "rxjs";
-import {forEach} from "@angular/router/src/utils/collection";
 import {IVerb} from "./iverb";
-import {el} from "@angular/platform-browser/testing/browser_util";
+import {WindowRefService} from "./window.service";
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit {
-
-  @ViewChild('verbsList') el: ElementRef;
+export class AppComponent implements OnInit {
 
   private isRareEnabled: boolean = true;
   private language: string = 'ru';
 
   verbs: Verb[] = [];
+  showedVerbs: Verb[] = [];
   rawData: IVerb[];
-  clickedVerb: string;
-  rawSearchSubject: Subject<any> = new Subject();
-  preciseSearchSubject: Subject<any> = new Subject();
 
-  constructor(private verbService: VerbService) {
+  private _window: Window;
+
+  constructor(private verbService: VerbService, private  windowRef: WindowRefService, private _ngZone: NgZone) {
+    this._window = windowRef.nativeWindow;
   }
 
   ngOnInit() {
     this.getAllVerbs();
-  }
-
-  ngAfterViewInit() {
   }
 
   getAllVerbs() {
@@ -44,24 +39,18 @@ export class AppComponent implements OnInit, AfterViewInit {
           for (var key in this.rawData) {
             var verb: Verb = new Verb(this.rawData[key]);
             this.verbs.push(verb);
+            this.showedVerbs.push(verb);
           }
         }.bind(this)
       );
   }
 
-  requestFound(isClicked:boolean) {
-    if (!this.isRareEnabled && !isClicked) this.switchIsRareEnabled();
-    // this.preciseSearchSubject.next(pString);
-    // // console.log(pString + ' found')
+  requestFound(verbType:string, isClicked:boolean) {
+    if (!this.isRareEnabled && !isClicked && verbType === 'rare') this.switchIsRareEnabled();
   }
-
-  /******
-   * Send raw data to every panel for checking
-   */
 
   onSearch(pVerb: string, isClicked:boolean = false) {
     try {
-      console.log('on search')
       pVerb = pVerb.toLowerCase();
       if (pVerb === 'was' || pVerb == 'were') {
         pVerb = 'be';
@@ -70,87 +59,44 @@ export class AppComponent implements OnInit, AfterViewInit {
       for (var key in this.verbs) {
         var verb: Verb = this.verbs[key];
         if(verb.react(pVerb)){
-          this.requestFound(isClicked);
+          this.requestFound(verb.usability, isClicked);
+          if(!isClicked)this.delayedMove(this.showedVerbs.indexOf(verb));
         }
       }
     }
     catch (e){
-      console.log('ARR ERROR ' + e)
+      // console.log('ARR ERROR ' + e)
     }
-
-
-    // for(var key in this.verbs){
-    //   //   // console.log(key + '   wweweewewewewe')
-    //   //   key.search(pVerb)
-    //       var verb:Verb = this.verbs[key];
-    //       // verb.checkRequest(pVerb);
-    //       // console.log(verb.form1)
-    //     // checkRequest : (verb) => (verb.checkRequest(pVerb))
-    //
-    //   }
-    // for (var i:number =0; i < this.verbs.length; i++){
-    //   var verb = this.verbs[i];
-    //   verb.react(pVerb);
-    // }
-
-    // for(var key in this.verbs){
-    //   var ruba:Verb = this.verbs[key];
-    //   ruba.checkRequest(pVerb);
-    //   // console.log(verb.usability + '   wweweewewewewe');
-    //   // key.search(pVerb)
-    // }
-
-    // this.verbs.forEach(value => {
-    //     value.react(pVerb);
-    //   });
-    // this.rememberClicked(pVerb);
-    // this.rawSearchSubject.next(pVerb);
-
-    // this.verbService.search(pVerb);
-
-
-    // this.verbService.searchVerbInputed.emit(pVerb);
-    // this.verbs.forEach((verb) => function (verb: Verb) {
-    //   // if(verb.react(pVerb)){
-    //   //   // verb.react(pVerb);
-    //   //   console.log('vidfboidfgbiorgb')
-    //   // }else{
-    //   //
-    //   // }
-    //   this.verbSe
-    // });
-
-    // this.verbs.forEach(vvverb => {
-    //   vvverb.show();
-    // })
-
-
-    //   function (numbers) {
-    //     numbers.forEach(element => {
-    //       if (element > this.max) {
-    //         this.max = element;
-    //       }
-    //     });
-    //   }
-    // };
-
-
   }
 
-  moveList(event) {
-    // console.log(event + '   catched event');
-    window.open('#' + event, "_self").scroll(window.scrollX, (window.scrollY - 52));
+  delayedMove(index:number){
+    this._ngZone.runOutsideAngular(() => {
+      setTimeout(() => this.moveList(index))
+    });
+  }
+
+  moveList(index:number) {
+    this._window.scroll(0,index*34);
   }
 
   switchIsRareEnabled() {
+    if(this.isRareEnabled){
+      this.showedVerbs = [];
+      for (var key in this.verbs) {
+        var verb: Verb = this.verbs[key];
+        if(verb.usability === 'normal')this.showedVerbs.push(verb);
+      }
+    }else{
+      this.showedVerbs = [];
+      for (var key in this.verbs) {
+        var verb: Verb = this.verbs[key];
+        this.showedVerbs.push(verb);
+      }
+    }
+
     this.isRareEnabled = !this.isRareEnabled;
   }
 
-  // rememberClicked(pString: string) {
-  //   this.clickedVerb = pString;
-  //   this.preciseSearchSubject.next(pString);
-  //   console.log(pString + ' remembered')
-  // }
 
 
 }

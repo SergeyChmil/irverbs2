@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {VerbService} from "./verb.service";
 import { VerbPanelComponent } from './verb-panel/verb-panel.component';
-import {Verb} from "./verb";
+import {WindowRefService} from "./window.service";
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import {Verb} from "./verb";
     FormsModule,
     HttpModule
   ],
-  providers: [VerbService],
+  providers: [VerbService,  WindowRefService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

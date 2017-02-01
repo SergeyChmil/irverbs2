@@ -19,11 +19,4 @@ export class VerbService {
       .map((res:Response) => res.json())
       .catch((error:any) => Observable.throw(error.json().error || "Service said: Server error"));
   }
-
-  // search(pVerb:string){
-  //    this.searchVerbInputed.emit(pVerb);
-  //   // return this.searchVerbInputed.emit(pVerb);
-  //   console.log('service said: ' + pVerb);
-  // }
-
 }
