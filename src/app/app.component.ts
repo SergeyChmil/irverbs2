@@ -25,10 +25,16 @@ export class AppComponent implements OnInit {
     this._window = windowRef.nativeWindow;
   }
 
+  /***
+   * Initialize function
+   */
   ngOnInit() {
     this.getAllVerbs();
   }
 
+  /***
+   * Create list of displayed elements.
+   */
   getAllVerbs() {
     console.log('get verbs')
     this.verbService.getVerbAPI()
@@ -49,6 +55,11 @@ export class AppComponent implements OnInit {
     if (!this.isRareEnabled && !isClicked && verbType === 'rare') this.switchIsRareEnabled();
   }
 
+  /***
+   * Handler function, works if user interacts with search input field, or clicks on panel
+   * @param pVerb - provides what string user is looking for
+   * @param isClicked - true - user clicked on panel, if false - user pressed search button
+   */
   onSearch(pVerb: string, isClicked:boolean = false) {
     try {
       pVerb = pVerb.toLowerCase();
@@ -69,16 +80,27 @@ export class AppComponent implements OnInit {
     }
   }
 
+  /****
+   * Creating a delayed call of moveList function for standing this function in rendering line and don't missing
+   * @param index
+   */
   delayedMove(index:number){
     this._ngZone.runOutsideAngular(() => {
       setTimeout(() => this.moveList(index))
     });
   }
 
+  /****
+   * Scrolls list of verbs to founded and opened verb
+   * @param index
+   */
   moveList(index:number) {
     this._window.scroll(0,index*34);
   }
 
+  /***
+   * Modify list of showed verbs if displaying of rare verbs is changing
+   */
   switchIsRareEnabled() {
     if(this.isRareEnabled){
       this.showedVerbs = [];

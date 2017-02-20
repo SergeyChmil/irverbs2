@@ -13,7 +13,12 @@ export class Verb implements IVerb {
     this.emitter = new EventEmitter();
   }
 
-
+  /****
+   * Check if search parameter matches for this verb. If it match, emits that panel should be showed and returns true.
+   * If not match, emits that panel should be hided and returns false
+   * @param pVerb - searched verb
+   * @returns {boolean} - returns true if
+   */
   react(pVerb: string): boolean {
     try{
       if (pVerb === this.form1 || pVerb === this.form2 || pVerb === this.form3) {
@@ -28,6 +33,10 @@ export class Verb implements IVerb {
       console.log('VERB ERROR ' + e);
     }
   }
+
+  /****
+   * Getters *
+   */
 
   get id(): number {
     return this.inputData.id

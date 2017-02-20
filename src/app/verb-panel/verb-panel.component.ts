@@ -9,7 +9,7 @@ declare var $: JQueryStatic;
   templateUrl: './verb-panel.component.html',
   styleUrls: ['./verb-panel.component.css']
 })
-export class VerbPanelComponent implements OnInit, AfterViewInit {
+export class VerbPanelComponent implements AfterViewInit {
 
   @Input() verb: Verb;
   @Input() isRareEnabled: boolean;
@@ -20,9 +20,9 @@ export class VerbPanelComponent implements OnInit, AfterViewInit {
 
   constructor(private _ngZone: NgZone) { }
 
-  ngOnInit() {
-  }
-
+  /***
+   * catch emits from abstract verb class
+   */
   ngAfterViewInit() {
     this.verb.emitter.subscribe(
       data => this.delayedToggle(data),
@@ -30,12 +30,20 @@ export class VerbPanelComponent implements OnInit, AfterViewInit {
     );
   }
 
+  /***
+   * Creating a delayed call of toggle function for standing this function in rendering line and don't missing
+   * @param command
+   */
   delayedToggle(command:string){
     this._ngZone.runOutsideAngular(() => {
       setTimeout(() => this.toggle(command))
     });
   }
 
+  /***
+   * Shows or hides panel content
+   * @param command
+   */
   toggle(command:string){
     try {
       var panelBody: any = <any>$(this.el.nativeElement);

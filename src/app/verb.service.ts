@@ -8,12 +8,17 @@ import {Verb} from "./verb";
 
 @Injectable()
 export class VerbService {
+
   public searchVerbInputed:EventEmitter<string>;
 
   constructor(private http:Http) {
     this.searchVerbInputed  = new EventEmitter();
   }
 
+  /***
+   * Load and provide main data from json file
+   * @returns {Observable<R>}
+   */
   getVerbAPI():Observable<Verb[]>{
     return this.http.get("http://localhost:3000/verbs")
       .map((res:Response) => res.json())
